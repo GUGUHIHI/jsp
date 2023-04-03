@@ -1,7 +1,7 @@
 package com.study.listener;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebListener;
+import javax.servlet.annotation.*;
 
 /**
  * Application Lifecycle Listener implementation class AppListener
@@ -21,15 +21,21 @@ public class AppListener implements ServletContextListener {
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
     public void contextDestroyed(ServletContextEvent sce)  { 
-         ServletContext application = sce.getServletContext();
-         application.setRequestCharacterEncoding("utf-8");
+         // TODO Auto-generated method stub
     }
 
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
-         // TODO Auto-generated method stub
+    	ServletContext application = sce.getServletContext();
+    	application.setRequestCharacterEncoding("utf-8");
     }
 	
 }
+
+
+
+
+
+
